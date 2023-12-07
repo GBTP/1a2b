@@ -1,0 +1,16 @@
+{
+    "name": "1a2b",
+    "rootNamespace": "",
+    "references": [
+        "GUID:52b24f20b91d3634ea30bec9f70d5a4e"
+    ],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}
