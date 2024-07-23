@@ -8,11 +8,12 @@ public class GameModel : AbstractModel
     public int TestCount;
     public List<int> Answer;
 
-    public BindableProperty<List<int>> PlayerGuess;
+    public BindableProperty<List<int>> Input;
 
     protected override void OnInit()
     {
+        TestCount = 0;
         Answer = new();
-        PlayerGuess = new(new List<int>());
+        Input = new(new List<int>());
     }
 }

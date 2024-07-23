@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using QFramework;
 using UnityEngine;
 
-public class InputNumberCommand : AbstractCommand<InputNumberCommand>
+public class InputNumberCommand : AbstractCommand
 {
     private int m_InputNumber;
 
@@ -12,18 +12,17 @@ public class InputNumberCommand : AbstractCommand<InputNumberCommand>
         m_InputNumber = input;
     }
 
-    protected override InputNumberCommand OnExecute()
+    protected override void OnExecute()
     {
         var model = this.GetModel<GameModel>();
 
-        if (!model.PlayerGuess.Value.Contains(m_InputNumber))
+        // 为了触发set有点抽象了
+        if (!model.Input.Value.Contains(m_InputNumber))
         {
-            var newlist = new List<int>(model.PlayerGuess.Value);
+            var newlist = new List<int>(model.Input.Value);
             newlist.Add(m_InputNumber);
-            model.PlayerGuess.Value = newlist;
+            model.Input.Value = newlist;
         }
-
-        return this;
     }
 }
 

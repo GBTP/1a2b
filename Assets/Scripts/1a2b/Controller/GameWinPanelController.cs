@@ -7,7 +7,6 @@ using UnityEngine.UI;
 public class GameWinPanelController : MonoBehaviour, IController
 {
     [SerializeField] private GameObject m_Panel;
-
     [SerializeField] private Text m_TestCountText;
     [SerializeField] private Button m_RestartButton;
 
