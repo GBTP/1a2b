@@ -15,6 +15,7 @@ public class GameplayController : MonoBehaviour, IController
 
     private void Start()
     {
+        Application.targetFrameRate = 300;
         this.GetModel<GameModel>().Input.Register(OnPlayerInput);
     }
 
