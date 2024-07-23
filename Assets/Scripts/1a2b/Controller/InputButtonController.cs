@@ -6,13 +6,13 @@ using UnityEngine.UI;
 
 public class InputButtonController : MonoBehaviour, IController
 {
-    public Button m_Button;
-    public int InputNumber;
-
     public IArchitecture GetArchitecture()
     {
         return GameApp.Interface;
     }
+
+    public Button m_Button;
+    public int InputNumber;
 
     private void Start()
     {

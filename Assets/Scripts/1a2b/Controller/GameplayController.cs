@@ -21,8 +21,10 @@ public class GameplayController : MonoBehaviour, IController
     private void OnPlayerInput(List<int> input)
     {
         var numberStr = List2String(input);
+
         if (input.Count == 4)
         {
+            // 不知道这样拿命令的执行结果是否符合规则
             var result = this.SendCommand(new CheckInputCommand());
             m_ResultText.text = numberStr + $",{result.A}A{result.B}B";
         }

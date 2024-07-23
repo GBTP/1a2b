@@ -32,7 +32,7 @@ public class CheckInputCommand : AbstractCommand<CheckInputCommand>
 
         if (A == 4)
         {
-            this.SendCommand(new GameWinCommand());
+            this.SendEvent<GameWinEvent>();
         }
 
         input.Clear();
